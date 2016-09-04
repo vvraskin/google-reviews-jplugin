@@ -1,0 +1,34 @@
+<?xml version="0.0.1" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+	<name>Google Reviews Client</name>
+	<author>Vadim Raskin</author>
+	<authorEmail>raskinvadim@gmail.com</authorEmail>
+	<authorUrl>www.raskin.pro</authorUrl>
+	<copyright>Copyright (c) 2016 Vadim Raskin. All rights reserved.</copyright>
+	<creationDate>June 12th, 2016</creationDate>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>0.0.1</version>
+	<description>TBD</description>
+	<!-- Parameters -->
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="place_id" type="text" default="Your place id" description="PLACE_ID_DESC" />
+				<field name="api_key" type="text" default="Your Google API key" size="39" description="API_KEY_DESCRIPTION" />
+			</fieldset>
+		</fields>
+	</config>
+	<!-- Files -->
+	<files folder="plugin" destination="jw_sig">
+		<filename plugin="gr_client">gr_client.php</filename>
+		<filename plugin="gr_client">gr_client.xml</filename>
+		<folder>gr_client</folder>
+	</files>
+	<languages folder="plugin">
+		<language tag="en-GB">language/en-GB/en-GB.plg_content_jw_sig.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_content_jw_sig.sys.ini</language>
+	</languages>
+	<updateservers>
+		<server type="extension" priority="1" name="Google Places Client">http://github.com</server>
+	</updateservers>
+</extension>
